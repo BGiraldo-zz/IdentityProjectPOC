@@ -1,0 +1,26 @@
+<div class="container">
+
+  <h2 class="title">My Products</h2>
+
+  <button (click)="getToken()" class="btn btn-primary">Get token</button>
+
+  <button (click)="getProducts()" class="btn btn-primary">All Products</button>
+
+
+  <!--<h2 class="title" *ngIf="selectedStudy"> Drug Compound: {{ selectedStudy.Compound}} </h2>-->
+
+  <h3>Product List</h3>
+
+  <ul>
+
+    <li *ngFor="let product of products">
+      <!-- (click)="onSelect(study)"> -->
+
+      <span> {{ product.Name }} </span> {{ product.Quantity }} - {{ product.Code }} - {{ product.serial ? product.serial : 'No product serial :D' }}
+
+    </li>
+  </ul>
+
+</div>
+
+  <router-outlet></router-outlet>
